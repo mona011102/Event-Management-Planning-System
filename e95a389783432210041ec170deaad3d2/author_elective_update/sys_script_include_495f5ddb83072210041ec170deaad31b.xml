@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1790229_event_ma.GetEventDetails</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>GetEventDetails</name>
+        <script><![CDATA[var GetEventDetails = Class.create();
+GetEventDetails.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+   getEventInfo: function() {
+        var eventId = this.getParameter('sysparm_event_id');
+
+        var eventRec = new GlideRecord('x_1790229_event_ma_event_record');
+        if (eventRec.get(eventId)) {
+            var data = {
+                event_name: eventRec.getValue('u_event_name'),
+                event_date: eventRec.getValue('u_event_date'),
+                location: eventRec.getValue('u_location'),
+                status: eventRec.getValue('u_status')
+            };
+            return new JSON.encode(data);
+        }
+        return '';
+   },
+    type: 'GetEventDetails'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 09:16:19</sys_created_on>
+        <sys_id>495f5ddb83072210041ec170deaad31b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetEventDetails</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_script_include_495f5ddb83072210041ec170deaad31b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 09:16:19</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</application>
+        <file_path/>
+        <instance_id>e48523cceb3b06d4e9bbfddacad0cd03</instance_id>
+        <instance_name>dev283032</instance_name>
+        <name>sys_script_include_495f5ddb83072210041ec170deaad31b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1790229_event_ma.GetEventDetails&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;GetEventDetails&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var GetEventDetails = Class.create();
+GetEventDetails.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+   getEventInfo: function() {
+        var eventId = this.getParameter('sysparm_event_id');
+
+        var eventRec = new GlideRecord('x_1790229_event_ma_event_record');
+        if (eventRec.get(eventId)) {
+            var data = {
+                event_name: eventRec.getValue('u_event_name'),
+                event_date: eventRec.getValue('u_event_date'),
+                location: eventRec.getValue('u_location'),
+                status: eventRec.getValue('u_status')
+            };
+            return new JSON.encode(data);
+        }
+        return '';
+   },
+    type: 'GetEventDetails'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-08-04 09:16:19&lt;/sys_created_on&gt;&lt;sys_id&gt;495f5ddb83072210041ec170deaad31b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;GetEventDetails&lt;/sys_name&gt;&lt;sys_package display_value="Event Management &amp;amp;Planning system" source="x_1790229_event_ma"&gt;e95a389783432210041ec170deaad3d2&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Event Management &amp;amp;Planning system"&gt;e95a389783432210041ec170deaad3d2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_495f5ddb83072210041ec170deaad31b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-08-04 09:16:19&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-502008270</payload_hash>
+        <record_name>GetEventDetails</record_name>
+        <reverted_from/>
+        <source>c1ed7c1f83432210041ec170deaad3de</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 09:16:19</sys_created_on>
+        <sys_id>b69f911f83072210041ec170deaad335</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198745e159c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 09:16:19</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>ba9f911f2507221055675deccbc5c934</update_guid>
+        <update_guid_history>ba9f911f2507221055675deccbc5c934:-502008270</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 09:32:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>6f51415c1ba44ddcbb843652073fa8a4</sys_id>
+        <sys_metadata>495f5ddb83072210041ec170deaad31b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetEventDetails</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_scope_delete display_value="">20f1fa1fc5da4fb89173f9efacfbac40</sys_scope_delete>
+        <sys_update_name>sys_script_include_495f5ddb83072210041ec170deaad31b</sys_update_name>
+        <sys_update_version display_value="sys_script_include_495f5ddb83072210041ec170deaad31b">b69f911f83072210041ec170deaad335</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 09:32:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

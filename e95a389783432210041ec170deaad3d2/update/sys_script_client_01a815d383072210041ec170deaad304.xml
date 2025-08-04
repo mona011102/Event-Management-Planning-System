@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate Date</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+   
+    var startTime = g_form.getValue('u_start_time');
+    var endTime = g_form.getValue('u_end_time');
+
+  
+    var start = new GlideDateTime(startTime);
+    var end = new GlideDateTime(endTime);
+
+    if (end.before(start)) {
+        g_form.showFieldMsg('u_end_time', 'End Time cannot be before Start Time.', 'error');
+        return false; }
+
+    return true; 
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 08:51:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>01a815d383072210041ec170deaad304</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_script_client_01a815d383072210041ec170deaad304</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 08:51:13</sys_updated_on>
+        <table>x_1790229_event_ma_schedule</table>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

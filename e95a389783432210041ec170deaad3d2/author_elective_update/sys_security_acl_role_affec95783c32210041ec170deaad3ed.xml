@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 08:03:43</sys_created_on>
+        <sys_id>affec95783c32210041ec170deaad3ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1790229_event_ma_venue.x_1790229_event_ma.venue_user</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_security_acl display_value="x_1790229_event_ma_venue">2ffec95783c32210041ec170deaad3ea</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_affec95783c32210041ec170deaad3ed</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 08:03:43</sys_updated_on>
+        <sys_user_role display_value="x_1790229_event_ma.venue_user" name="x_1790229_event_ma.venue_user">17fe051783c32210041ec170deaad3bd</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</application>
+        <file_path/>
+        <instance_id>e48523cceb3b06d4e9bbfddacad0cd03</instance_id>
+        <instance_name>dev283032</instance_name>
+        <name>sys_security_acl_role_affec95783c32210041ec170deaad3ed</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-04 08:03:43</sys_created_on><sys_id>affec95783c32210041ec170deaad3ed</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1790229_event_ma_venue.x_1790229_event_ma.venue_user</sys_name><sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package><sys_policy/><sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope><sys_security_acl display_value="x_1790229_event_ma_venue">2ffec95783c32210041ec170deaad3ea</sys_security_acl><sys_update_name>sys_security_acl_role_affec95783c32210041ec170deaad3ed</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-04 08:03:43</sys_updated_on><sys_user_role display_value="x_1790229_event_ma.venue_user" name="x_1790229_event_ma.venue_user">17fe051783c32210041ec170deaad3bd</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1058847999</payload_hash>
+        <record_name>x_1790229_event_ma_venue.x_1790229_event_ma.venue_user</record_name>
+        <reverted_from/>
+        <source>c1ed7c1f83432210041ec170deaad3de</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 08:03:44</sys_created_on>
+        <sys_id>2bfe0d5783c32210041ec170deaad309</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198741b9f120000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 08:03:44</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>2ffe0d57ebc32210542f095ef77ec508</update_guid>
+        <update_guid_history>2ffe0d57ebc32210542f095ef77ec508:1058847999</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1790229_event_ma_venue.x_1790229_event_ma.venue_user">03705dd783c32210041ec170deaad3ea</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 08:10:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>1e40beef550941e8a27115556a367240</sys_id>
+        <sys_metadata>affec95783c32210041ec170deaad3ed</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1790229_event_ma_venue.x_1790229_event_ma.venue_user</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_parent display_value="">2ffec95783c32210041ec170deaad3ea</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_scope_delete display_value="">20f1fa1fc5da4fb89173f9efacfbac40</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_affec95783c32210041ec170deaad3ed</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_affec95783c32210041ec170deaad3ed">2bfe0d5783c32210041ec170deaad309</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 08:10:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

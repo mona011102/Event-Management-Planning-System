@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1790229_event_ma.EvenUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>EvenUtils</name>
+        <script><![CDATA[var EvenUtils = Class.create();
+EvenUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getEventDetails: function() {
+		var eventId = this.getParameter('sysparm_eventId'); 
+        var gr = new GlideRecord('x_1790229_event_ma_event_record');
+		gr.addQuery('sys_id', eventId);
+		gr.query(); // Your event table name with scope prefix
+        if (gr.next()) {
+            return JSON.stringify({
+                event_name: gr.getValue('u_event_name'),
+                location: gr.getValue('u_location'),
+                planner: gr.getDisplayValue('u_planner'),
+                event_date: gr.getValue('u_event_date')
+            });
+        }
+        return JSON.stringify({
+            error: 'Event not found'
+        });
+    },
+
+    type: 'EvenUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 14:27:27</sys_created_on>
+        <sys_id>46f4a2d3838b2210041ec170deaad312</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>EvenUtils</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_script_include_46f4a2d3838b2210041ec170deaad312</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 15:43:46</sys_updated_on>
+    </sys_script_include>
+</record_update>

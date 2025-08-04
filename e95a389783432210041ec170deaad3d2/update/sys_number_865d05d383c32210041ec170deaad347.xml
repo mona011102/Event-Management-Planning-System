@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_1790229_event_ma_attendee">x_1790229_event_ma_attendee</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>ATT</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 07:56:32</sys_created_on>
+        <sys_id>865d05d383c32210041ec170deaad347</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ATT</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_number_865d05d383c32210041ec170deaad347</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 07:56:32</sys_updated_on>
+    </sys_number>
+</record_update>

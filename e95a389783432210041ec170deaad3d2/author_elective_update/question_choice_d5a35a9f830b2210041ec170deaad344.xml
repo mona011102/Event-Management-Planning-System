@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="DELETE">
+        <inactive>false</inactive>
+        <order>100</order>
+        <published_ref/>
+        <question display_value="Status">f1c19edb830b2210041ec170deaad375</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 13:03:51</sys_created_on>
+        <sys_id>d5a35a9f830b2210041ec170deaad344</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>In Progress</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>question_choice_d5a35a9f830b2210041ec170deaad344</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 13:03:51</sys_updated_on>
+        <text>In Progress</text>
+        <value/>
+    </question_choice>
+    <fx_price action="DELETE" query="id=d5a35a9f830b2210041ec170deaad344"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</application>
+        <file_path/>
+        <instance_id>e48523cceb3b06d4e9bbfddacad0cd03</instance_id>
+        <instance_name>dev283032</instance_name>
+        <name>question_choice_d5a35a9f830b2210041ec170deaad344</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice"><question_choice action="INSERT_OR_UPDATE"><inactive>false</inactive><order>100</order><published_ref/><question display_value="Status">f1c19edb830b2210041ec170deaad375</question><sys_class_name>question_choice</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-04 13:03:51</sys_created_on><sys_id>d5a35a9f830b2210041ec170deaad344</sys_id><sys_mod_count>0</sys_mod_count><sys_name>In Progress</sys_name><sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package><sys_policy/><sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope><sys_update_name>question_choice_d5a35a9f830b2210041ec170deaad344</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-04 13:03:51</sys_updated_on><text>In Progress</text><value/></question_choice><fx_price action="delete_multiple" query="id=d5a35a9f830b2210041ec170deaad344"/></record_update>]]></payload>
+        <payload_hash>653510016</payload_hash>
+        <record_name>In Progress</record_name>
+        <reverted_from/>
+        <source>c1ed7c1f83432210041ec170deaad3de</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 13:03:52</sys_created_on>
+        <sys_id>00b3da9f830b2210041ec170deaad324</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198752e677e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 13:03:52</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>04b3da9f800b2210b49c55b4df529b23</update_guid>
+        <update_guid_history>04b3da9f800b2210b49c55b4df529b23:653510016</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="In Progress">a0f392df830b2210041ec170deaad374</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 13:05:00</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>278f2b91eba14c1ebd12d2d18a3e2399</sys_id>
+        <sys_metadata>d5a35a9f830b2210041ec170deaad344</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>In Progress</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_scope_delete display_value="">20f1fa1fc5da4fb89173f9efacfbac40</sys_scope_delete>
+        <sys_update_name>question_choice_d5a35a9f830b2210041ec170deaad344</sys_update_name>
+        <sys_update_version display_value="question_choice_d5a35a9f830b2210041ec170deaad344">00b3da9f830b2210041ec170deaad324</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 13:05:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

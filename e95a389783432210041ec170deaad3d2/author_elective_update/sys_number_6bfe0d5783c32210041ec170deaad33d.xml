@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="DELETE">
+        <category display_value="" name="x_1790229_event_ma_venue">x_1790229_event_ma_venue</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>VNU</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 08:03:44</sys_created_on>
+        <sys_id>6bfe0d5783c32210041ec170deaad33d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>VNU</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_number_6bfe0d5783c32210041ec170deaad33d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 08:03:44</sys_updated_on>
+    </sys_number>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</application>
+        <file_path/>
+        <instance_id>e48523cceb3b06d4e9bbfddacad0cd03</instance_id>
+        <instance_name>dev283032</instance_name>
+        <name>sys_number_6bfe0d5783c32210041ec170deaad33d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number"><sys_number action="INSERT_OR_UPDATE"><category display_value="" name="x_1790229_event_ma_venue">x_1790229_event_ma_venue</category><maximum_digits>7</maximum_digits><number>1000</number><prefix>VNU</prefix><sys_class_name>sys_number</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-04 08:03:44</sys_created_on><sys_id>6bfe0d5783c32210041ec170deaad33d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>VNU</sys_name><sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package><sys_policy/><sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope><sys_update_name>sys_number_6bfe0d5783c32210041ec170deaad33d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-04 08:03:44</sys_updated_on></sys_number></record_update>]]></payload>
+        <payload_hash>-780356455</payload_hash>
+        <record_name>VNU</record_name>
+        <reverted_from/>
+        <source>c1ed7c1f83432210041ec170deaad3de</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 08:03:45</sys_created_on>
+        <sys_id>33fe0d5783c32210041ec170deaad353</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198741ba3f60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 08:03:45</sys_updated_on>
+        <type>Number</type>
+        <update_guid>37fe0d572fc32210f83386d07ca2c652</update_guid>
+        <update_guid_history>37fe0d572fc32210f83386d07ca2c652:-780356455</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 08:10:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_number">sys_number</sys_db_object>
+        <sys_id>22c9ad41d17c4ee897a47c9ec49bf051</sys_id>
+        <sys_metadata>6bfe0d5783c32210041ec170deaad33d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>VNU</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_parent display_value="">62de495783c32210041ec170deaad36c</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_scope_delete display_value="">20f1fa1fc5da4fb89173f9efacfbac40</sys_scope_delete>
+        <sys_update_name>sys_number_6bfe0d5783c32210041ec170deaad33d</sys_update_name>
+        <sys_update_version display_value="sys_number_6bfe0d5783c32210041ec170deaad33d">33fe0d5783c32210041ec170deaad353</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 08:10:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

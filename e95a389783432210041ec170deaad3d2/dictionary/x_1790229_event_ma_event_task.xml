@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="1f5509d783832210041ec170deaad327" extends="task" label="Event Task" max_length="40" name="x_1790229_event_ma_event_task" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Task Name" max_length="40" name="u_task_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" label="Due Date" max_length="40" name="u_due_date" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Event Id" max_length="32" name="u_event_id" reference="x_1790229_event_ma_event_record" type="reference"/>
+        <element attributes="encode_utf8=false" label="Assigned To" max_length="32" name="u_assigned_to" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="4" value="new"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
+                <element inactive_on_update="false" label="In Progress" sequence="1" value="in progress"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="Not Started" sequence="0" value="not started"/>
+            </choice>
+        </element>
+    </element>
+</database>

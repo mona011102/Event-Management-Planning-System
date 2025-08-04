@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1790229_event_ma_budget</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Update Budget</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+    var eventID = current.u_event_id;
+
+    // Find matching Budget record
+    var budgetGR = new GlideRecord('x_1790229_event_ma_budget');
+    budgetGR.addQuery('u_event_id', eventID);
+    budgetGR.query();
+
+    if (budgetGR.next()) {
+        // Safely parse values
+        var spent = parseFloat(budgetGR.u_amount_spent || 0);
+        var total = parseFloat(budgetGR.u_total_budget || 0);
+        var newExpense = parseFloat(current.u_amount || 0);
+
+        // Update spent and remaining
+        spent += newExpense;
+        budgetGR.u_amount_spent = spent;
+        budgetGR.u_amount_remaining = total - spent;
+
+        budgetGR.update();
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 11:14:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>035afddb83872210041ec170deaad3f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update Budget</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_script_035afddb83872210041ec170deaad3f8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 11:14:30</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=035afddb83872210041ec170deaad3f8"/>
+</record_update>
