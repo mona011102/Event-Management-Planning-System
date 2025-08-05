@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="b2e9459f83832210041ec170deaad355" extends="task" label="Vendor" max_length="40" name="x_1790229_event_ma_vendor" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Contact Number" max_length="40" name="u_contact_number" type="string"/>
+        <element attributes="encode_utf8=false" label="Event ID" max_length="32" name="u_event_id" reference="x_1790229_event_ma_event_record" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Services Provided" max_length="40" name="u_services_provided" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
         <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="u_email" type="string"/>

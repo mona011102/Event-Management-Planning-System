@@ -6,7 +6,7 @@
         <availability>on_desktop</availability>
         <billable>false</billable>
         <can_cancel>false</can_cancel>
-        <category/>
+        <category display_value="Event Related Services">9e7a4693830b2210041ec170deaad373</category>
         <checked_out/>
         <cost>0</cost>
         <custom_cart/>
@@ -70,7 +70,7 @@
 * To access the variables, use `producer.var1` where var1 is the name of the variable
 * To access the Record Producer use `cat_item`
 */]]></save_script>
-        <sc_catalogs/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
@@ -80,7 +80,14 @@
 * Don't use `current.setValue('sys_class_name', 'xxx')` as this will trigger reparent flow and can cause data loss
 * Avoid `current.setAbortAction()` and generate a separate record
 * Use `producer.var1` to access variables
-*/]]></script>
+*/
+current.u_contact_number= producer.v_contact_number;
+current.u_venue_name = producer.v_venue_name;
+current.u_contact_person= producer.v_contact_person;
+current.u_location = producer.v_location;
+current.u_capacity = producer.v_capacity;
+
+]]></script>
         <short_description/>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
@@ -89,14 +96,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-04 15:57:17</sys_created_on>
         <sys_id>d63b725f83cb2210041ec170deaad32b</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Request Venue Booking</sys_name>
         <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
         <sys_update_name>sc_cat_item_producer_d63b725f83cb2210041ec170deaad32b</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2025-08-04 16:12:13</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 21:06:30</sys_updated_on>
         <table_name>x_1790229_event_ma_venue</table_name>
         <taxonomy_topic/>
         <template/>
@@ -104,7 +111,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>7</version>
+        <version>21</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

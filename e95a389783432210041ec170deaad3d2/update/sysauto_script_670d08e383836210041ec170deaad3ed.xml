@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name> sends reminders to event planners </name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2025-08-04 21:54:08</run_start>
+        <run_time>1970-01-01 00:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[(function sendUpcomingTaskReminders() {
+    var today = new GlideDateTime();
+    var twoDaysLater = new GlideDateTime();
+    twoDaysLater.addDaysUTC(2);
+
+    var taskGR = new GlideRecord('x_1790229_event_ma_event_task');
+    taskGR.addNotNullQuery('u_due_date');
+    taskGR.addQuery('u_due_date', '>=', today);
+    taskGR.addQuery('u_due_date', '<=', twoDaysLater);
+    taskGR.query();
+
+    var reminderMap = {}; // {event_sys_id: {manager, eventName, tasks: []}}
+
+    while (taskGR.next()) {
+        var event = taskGR.u_event;
+        if (!event || !event.u_event_manager) continue;
+
+        var eventId = event.sys_id.toString();
+        if (!reminderMap[eventId]) {
+            reminderMap[eventId] = {
+                eventName: event.u_event_name + ' (' + event.number + ')',
+                manager: event.u_event_manager,
+                tasks: []
+            };
+        }
+
+        reminderMap[eventId].tasks.push({
+            name: taskGR.u_task_name + '',
+            due: taskGR.getDisplayValue('u_due_date')
+        });
+    }
+
+    // Send one email per manager per event
+    for (var Id in reminderMap) {
+        var data = reminderMap[Id];
+        var manager = data.manager;
+
+        if (!manager || !manager.email) {
+            gs.warn('No planner email for event: ' + data.eventName);
+            continue;
+        }
+
+        var body = 'Upcoming Tasks for Event: ' + data.eventName + '\n\n';
+        body += 'Task Name | Due Date\n';
+        body += '---------------------------\n';
+
+        data.tasks.forEach(function(task) {
+            body += task.name + ' | ' + task.due + '\n';
+        });
+
+        gs.eventQueue(
+            'x_1790229_event_ma.upcoming_task_reminder',
+            new GlideRecord('sys_user').get(manager.sys_id),
+            data.eventName,
+            body
+        );
+    }
+})();
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 21:57:31</sys_created_on>
+        <sys_id>670d08e383836210041ec170deaad3ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name> sends reminders to event planners </sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sysauto_script_670d08e383836210041ec170deaad3ed</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 21:57:31</sys_updated_on>
+        <time_zone>floating</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

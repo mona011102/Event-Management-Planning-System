@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>u_contact_number</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 19:28:53</sys_created_on>
+        <sys_data_policy display_value="To ensure that the contact_number field is mandatory for all event records.">778b6b9b83cf2210041ec170deaad332</sys_data_policy>
+        <sys_id>37bb6f9b83cf2210041ec170deaad321</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_contact_number</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_data_policy_rule_37bb6f9b83cf2210041ec170deaad321</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 19:28:53</sys_updated_on>
+        <table>x_1790229_event_ma_event_record</table>
+    </sys_data_policy_rule>
+</record_update>

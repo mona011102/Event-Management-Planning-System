@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1790229_event_ma.SendUpcomingEventReminder</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SendUpcomingEventReminder</name>
+        <script><![CDATA[var SendUpcomingEventReminder = Class.create();
+SendUpcomingEventReminder.prototype = {
+    initialize: function() {
+    },
+
+ sendReminders: function() {
+        var today = new GlideDateTime();
+        var upcomingDate = new GlideDateTime();
+        upcomingDate.addDays(1); // Sends reminders for events happening tomorrow
+
+        var attendeeGR = new GlideRecord('x_1790229_event_ma_attendee'); // Your attendee table
+        attendeeGR.addNotNullQuery('u_event_id');
+        attendeeGR.addQuery('u_event.u_event_date', '>=', today);
+        attendeeGR.addQuery('u_event.u_event_date', '<', upcomingDate);
+        attendeeGR.query();
+
+        while (attendeeGR.next()) {
+            var user = attendeeGR.u_attendee; // Reference to sys_user
+            var event = attendeeGR.u_event_id;
+
+            if (user) {
+                // Send event to notification system
+                gs.eventQueue('x_1790229_event_ma.upcoming_event_attendee_reminder', user, event.getDisplayValue('u_event_name'), event.getDisplayValue('u_event_date'));
+            }
+        }
+    },
+
+    type: 'SendUpcomingEventReminder'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 22:10:23</sys_created_on>
+        <sys_id>129f802b83836210041ec170deaad3d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SendUpcomingEventReminder</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_script_include_129f802b83836210041ec170deaad3d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 22:10:23</sys_updated_on>
+    </sys_script_include>
+</record_update>

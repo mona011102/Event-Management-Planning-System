@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="pa_dashboards_permissions">
+    <pa_dashboards_permissions action="INSERT_OR_UPDATE">
+        <dashboard display_value="Event Management Overview">f6c9982783c36210041ec170deaad368</dashboard>
+        <delete>false</delete>
+        <group display_value="Event Planners" name="Event Planners">d9da789783432210041ec170deaad38d</group>
+        <identity>d9da789783432210041ec170deaad38d</identity>
+        <read>true</read>
+        <role/>
+        <sys_class_name>pa_dashboards_permissions</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 22:59:40</sys_created_on>
+        <sys_id>730c58e783c36210041ec170deaad341</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>d9da789783432210041ec170deaad38d</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>pa_dashboards_permissions_730c58e783c36210041ec170deaad341</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 22:59:40</sys_updated_on>
+        <type>2</type>
+        <user/>
+        <write>false</write>
+    </pa_dashboards_permissions>
+</record_update>

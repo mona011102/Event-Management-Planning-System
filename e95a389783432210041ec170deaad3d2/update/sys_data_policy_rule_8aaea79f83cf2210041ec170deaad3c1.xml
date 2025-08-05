@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>u_rating</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 19:41:36</sys_created_on>
+        <sys_data_policy display_value=" To ensure that the rating field is mandatory when the feedback is submitted.">957ea39f83cf2210041ec170deaad3b7</sys_data_policy>
+        <sys_id>8aaea79f83cf2210041ec170deaad3c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_rating</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_data_policy_rule_8aaea79f83cf2210041ec170deaad3c1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 19:41:36</sys_updated_on>
+        <table>x_1790229_event_ma_feedback</table>
+    </sys_data_policy_rule>
+</record_update>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>fetch_vendors</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[var eventId = 'EVT0001017'; // Replace with your actual Event sys_id
+
+var vendorGR = new GlideRecord('x_1790229_event_ma_vendor'); // Replace with your vendor table name
+vendorGR.addQuery('u_event_id.number', eventId); // Assuming 'u_event' is the reference field to the Event
+vendorGR.query();
+
+while (vendorGR.next()) {
+    gs.info('Vendor Name: ' + vendorGR.getDisplayValue('u_vendor_name')); // Adjust field name if different
+    gs.info('Email: ' + vendorGR.getValue('u_email'));             // Adjust accordingly
+    gs.info('Phone: ' + vendorGR.getValue('u_contact_number'));
+   
+}
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 20:46:39</sys_created_on>
+        <sys_id>42ebf35f83036210041ec170deaad301</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>fetch_vendors</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_script_fix_42ebf35f83036210041ec170deaad301</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 20:46:39</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

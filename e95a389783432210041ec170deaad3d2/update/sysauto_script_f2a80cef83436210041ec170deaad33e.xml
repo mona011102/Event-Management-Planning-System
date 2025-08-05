@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Fetch event Details</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2025-08-04 21:34:58</run_start>
+        <run_time>1970-01-01 00:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var eventId = 'EVT0001014'; // Replace with your actual Event sys_id
+
+var venueGR = new GlideRecord('x_1790229_event_ma_venue'); // Replace with your actual Venue table name
+venueGR.addQuery('u_event_id.number', eventId); // Assuming 'u_event' is the reference field to the Event table
+venueGR.query();
+
+while (venueGR.next()) {
+    gs.info('Venue Name: ' + venueGR.getValue('u_venue_name'));
+    gs.info('Contact Number: ' + venueGR.getValue('u_contact_number'));
+    gs.info('Contact Person: ' + venueGR.getValue('u_contact_person'));
+   
+    gs.info('Capacity: ' + venueGR.getValue('u_capacity'));
+  
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 21:37:29</sys_created_on>
+        <sys_id>f2a80cef83436210041ec170deaad33e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fetch event Details</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sysauto_script_f2a80cef83436210041ec170deaad33e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 21:37:29</sys_updated_on>
+        <time_zone>floating</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

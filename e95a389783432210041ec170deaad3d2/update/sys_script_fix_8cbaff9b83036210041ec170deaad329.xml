@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>fetch_attendees_for_event</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[var eventId = 'EVT0001010'; // Replace with the actual Event sys_id
+
+var attendeeGR = new GlideRecord('x_1790229_event_ma_attendee'); // Replace with your Attendee table name
+attendeeGR.addQuery('u_event_id.number', eventId); // Assuming 'u_event' is the reference field to the Event
+attendeeGR.query();
+
+while (attendeeGR.next()) {
+    gs.info('Attendee  FirstName: ' + attendeeGR.getDisplayValue('u_first_name'));
+    gs.info('Email: ' + attendeeGR.getValue('u_email')); // Adjust field names accordingly
+  
+}
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 20:38:43</sys_created_on>
+        <sys_id>8cbaff9b83036210041ec170deaad329</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>fetch_attendees_for_event</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_script_fix_8cbaff9b83036210041ec170deaad329</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 20:38:43</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>Feedback_details</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[var eventId = 'EVT0001010'; // Replace with your Event sys_id
+
+var feedbackGR = new GlideRecord('x_1790229_event_ma_feedback'); // Replace with your actual Feedback table
+feedbackGR.addQuery('u_event_id.number', eventId); // Assuming 'u_event' is the reference field to Event
+feedbackGR.query();
+
+while (feedbackGR.next()) {
+    gs.info('Feedback Id: ' + feedbackGR.getDisplayValue('number'));       // User who gave the feedback
+    gs.info('Rating: ' + feedbackGR.getValue('u_rating'));                 // e.g., numeric or choice field
+    gs.info('Comments: ' + feedbackGR.getValue('u_comments'));
+  
+}
+
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 20:57:18</sys_created_on>
+        <sys_id>ac8fbf1383436210041ec170deaad37b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Feedback_details</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_script_fix_ac8fbf1383436210041ec170deaad37b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 20:57:18</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

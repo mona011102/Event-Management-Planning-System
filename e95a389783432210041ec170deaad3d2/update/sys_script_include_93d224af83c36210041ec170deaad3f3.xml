@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1790229_event_ma.FeedbackUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>FeedbackUtils</name>
+        <script><![CDATA[var FeedbackUtils = Class.create();
+FeedbackUtils.prototype = {
+    initialize: function() {},
+    // 1. Fetch feedback details by ID (feedback number)
+    getFeedbackByID: function(feedbackID) {
+        var gr = new GlideRecord('x_1790229_event_ma_feedback');
+        gr.addQuery('number', feedbackID);
+        gr.query();
+        if (gr.next()) {
+            return gr.getDisplayValue('u_attendee_id') + ' | ' + gr.getDisplayValue('u_rating') + ' | ' + gr.getValue('u_comments');
+        }
+        return 'No feedback found';
+    },
+
+    // 2. Check if feedback is positive (Excellent or Good)
+    isPositiveFeedback: function(feedbackID) {
+        var gr = new GlideRecord('x_1790229_event_ma_feedback');
+        gr.addQuery('number', feedbackID);
+        gr.query();
+        if (gr.next()) {
+            var rating = gr.u_rating.toLowerCase();
+            if (rating === 'excellent' || rating === 'good') {
+                return 'Positive Feedback';
+            } else {
+                return 'Not Positive';
+            }
+        }
+        return 'Feedback not found';
+    },
+
+    // 3. Fetch all feedback entries by Event ID
+    getFeedbackByEvent: function(eventID) {
+        var gr = new GlideRecord('x_1790229_event_ma_feedback');
+        gr.addQuery('u_event_id.number', eventID);
+        gr.query();
+        var result = [];
+        while (gr.next()) {
+            result.push(gr.getDisplayValue('u_attendee_id') + ' | ' + gr.u_rating + ' | ' + gr.u_comments);
+        }
+        return result.length ? result.join('\n') : 'No feedback found';
+    },
+
+    type: 'FeedbackUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 23:31:02</sys_created_on>
+        <sys_id>93d224af83c36210041ec170deaad3f3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FeedbackUtils</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sys_script_include_93d224af83c36210041ec170deaad3f3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 00:15:59</sys_updated_on>
+    </sys_script_include>
+</record_update>

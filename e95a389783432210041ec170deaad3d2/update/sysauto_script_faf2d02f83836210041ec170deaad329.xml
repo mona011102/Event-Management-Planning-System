@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>	Budget Review Reminder to Planners</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2025-08-04 22:20:01</run_start>
+        <run_time>1970-01-01 00:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[(function executeRule(current, gPrevious) {
+    var now = new GlideDateTime();
+    var nextWeek = new GlideDateTime();
+    nextWeek.addDaysUTC(7); // One week from today
+
+    var budgetGR = new GlideRecord('x_1790229_event_ma_budget'); // Replace with actual budget table name
+    budgetGR.addQuery('u_review_due_date', '<=', nextWeek);      // Due for review in next 7 days
+    budgetGR.addQuery('u_status', '!=', 'Reviewed');             // Not yet reviewed
+    budgetGR.query();
+
+    while (budgetGR.next()) {
+        var planner = budgetGR.u_event_planner; // Assuming this is a reference to sys_user
+
+        if (planner) {
+            // Send custom event for notification
+            gs.eventQueue(
+                'x_1790229_event_ma.budget_review_reminder',
+                planner,
+                budgetGR.u_event_name,                   // event.parm1
+                budgetGR.u_review_due_date.getDisplayValue() // event.parm2
+            );
+        }
+    }
+})();
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 22:23:35</sys_created_on>
+        <sys_id>faf2d02f83836210041ec170deaad329</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>	Budget Review Reminder to Planners</sys_name>
+        <sys_package display_value="Event Management &amp;Planning system" source="x_1790229_event_ma">e95a389783432210041ec170deaad3d2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;Planning system">e95a389783432210041ec170deaad3d2</sys_scope>
+        <sys_update_name>sysauto_script_faf2d02f83836210041ec170deaad329</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 22:23:35</sys_updated_on>
+        <time_zone>floating</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

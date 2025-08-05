@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="e01c091383c32210041ec170deaad3ca" extends="task" label="Budget" max_length="40" name="x_1790229_event_ma_budget" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" sequence="1" value="rejected"/>
+                <element inactive_on_update="false" label="Pending" sequence="2" value="pending"/>
+                <element inactive_on_update="false" label="Approve" sequence="0" value="approve"/>
+            </choice>
+        </element>
         <element attributes="encode_utf8=false" label="Event Id" max_length="32" name="u_event_id" reference="x_1790229_event_ma_event_record" type="reference"/>
         <element attributes="omit_sys_original=true" label="Total Budget" max_length="20" name="u_total_budget" type="currency"/>
         <element attributes="omit_sys_original=true" label="Amount Remaining" max_length="20" name="u_amount_remaining" type="currency"/>
         <element attributes="omit_sys_original=true" label="Amount spent" max_length="20" name="u_amount_spent" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="u_approve" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Approve" sequence="0" value="approve"/>
+                <element inactive_on_update="false" label="Pending" sequence="2" value="pending"/>
+                <element inactive_on_update="false" label="Rejected" sequence="1" value="rejected"/>
+            </choice>
+        </element>
     </element>
 </database>
